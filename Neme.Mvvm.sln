@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Neme.Mvvm", "Neme.Mvvm\Neme.Mvvm.csproj", "{2A682388-B48E-4A1D-911E-884BD5035B42}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Neme.Mvvm.Tests", "Neme.Mvvm.Tests\Neme.Mvvm.Tests.csproj", "{A9A194CC-B9F5-4713-A51F-8B010A566F72}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2A682388-B48E-4A1D-911E-884BD5035B42}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2A682388-B48E-4A1D-911E-884BD5035B42}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2A682388-B48E-4A1D-911E-884BD5035B42}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2A682388-B48E-4A1D-911E-884BD5035B42}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A9A194CC-B9F5-4713-A51F-8B010A566F72}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A9A194CC-B9F5-4713-A51F-8B010A566F72}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A9A194CC-B9F5-4713-A51F-8B010A566F72}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A9A194CC-B9F5-4713-A51F-8B010A566F72}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
