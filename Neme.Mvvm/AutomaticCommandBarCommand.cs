@@ -20,6 +20,23 @@ namespace Neme.Mvvm
             this.availability = availability;
         }
 
+        public AutomaticCommandBarCommand(Action execute, Func<bool> isVisible, Func<bool> isEnabled)
+        {
+            if (execute == null)
+                throw new ArgumentNullException("execute");
+
+            this.execute = execute;
+            this.availability = () => GetAvailability(isVisible, isEnabled);
+        }
+
+        private Availability GetAvailability(Func<bool> isVisible, Func<bool> isEnabled)
+        {
+            if (isVisible == null || isVisible())
+                return isEnabled == null || isEnabled() ? Availability.Available : Availability.Disabled;
+            else
+                return Availability.Hidden;
+        }
+
         // IAutomaticCommandBarCommand
 
         public void RaiseAvailabilityChanged()
