@@ -9,9 +9,9 @@ namespace Neme.Mvvm.Tests
 {
     public abstract class AutomaticCommandSharedTest : CommandSharedTest
     {
-        protected void TestCanExecute(AutomaticCommandShared enabledCommand, Func<Func<bool>, AutomaticCommandShared> createCanExecuteCommand)
+        protected void TestCanExecute(AutomaticCommandShared defaultCommand, Func<Func<bool>, AutomaticCommandShared> createCanExecuteCommand)
         {
-            Assert.IsTrue(enabledCommand.CanExecute(null));
+            Assert.IsTrue(defaultCommand.CanExecute(null));
 
             bool canExecute = true;
             var canExecuteCommand = createCanExecuteCommand(() => canExecute);

@@ -6,7 +6,7 @@ using System.Windows.Input;
 
 namespace Neme.Mvvm
 {
-    public abstract class AutomaticCommandShared : ICommand
+    public abstract class AutomaticCommandShared : IAutomaticCommand
     {
         private readonly Func<bool> canExecute;
 
@@ -14,6 +14,8 @@ namespace Neme.Mvvm
         {
             this.canExecute = canExecute;
         }
+
+        // IAutomaticCommand
 
         public void RaiseCanExecuteChanged()
         {

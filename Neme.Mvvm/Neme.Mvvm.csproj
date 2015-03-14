@@ -38,6 +38,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AutomaticCommand.cs" />
+    <Compile Include="AutomaticCommandBarCommand.cs" />
     <Compile Include="AutomaticCommandOfParameter.cs" />
     <Compile Include="AutomaticCommandShared.cs" />
     <Compile Include="Availability.cs" />
