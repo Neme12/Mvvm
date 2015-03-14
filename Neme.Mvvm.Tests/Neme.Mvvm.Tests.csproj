@@ -61,8 +61,10 @@
     <Compile Include="ControlledCommandOfParameterTest.cs" />
     <Compile Include="ControlledCommandSharedTest.cs" />
     <Compile Include="ControlledCommandTest.cs" />
+    <Compile Include="NotifyBaseClass.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="AutomaticCommandBarCommandTest.cs" />
+    <Compile Include="NotifyBaseTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Neme.Mvvm\Neme.Mvvm.csproj">
