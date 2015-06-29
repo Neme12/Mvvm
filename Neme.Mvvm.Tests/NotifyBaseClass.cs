@@ -16,7 +16,7 @@ namespace Neme.Mvvm.Tests
 
         public new void SetProperty<T>(ref T field, T value, string propertyName)
         {
-            base.SetProperty(ref field, value, propertyName);
+            base.Set(ref field, value, propertyName);
         }
 
         public string GetCallerMemberName()
@@ -26,7 +26,7 @@ namespace Neme.Mvvm.Tests
 
             PropertyChanged += (sender, e) => calledPropertyName = e.PropertyName;
 
-            base.SetProperty(ref field, "value");
+            base.Set(ref field, "value");
             return calledPropertyName;
         }
     }
