@@ -1,5 +1,6 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using Neme.TestUtilities;
 
 namespace Neme.Mvvm.Tests
 {
@@ -103,6 +104,12 @@ namespace Neme.Mvvm.Tests
             Assert.IsFalse(called);
             command.Execute();
             Assert.IsTrue(called);
+        }
+
+        [TestMethod]
+        public void TestDefaultConstructor()
+        {
+            Throws.Exception<NotSupportedException>(() => new AutomaticCommandBarCommand());
         }
 
         [TestMethod]

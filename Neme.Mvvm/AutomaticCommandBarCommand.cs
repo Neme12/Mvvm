@@ -11,6 +11,11 @@ namespace Neme.Mvvm
         private readonly Action execute;
         private readonly Func<Availability> availability;
 
+        public AutomaticCommandBarCommand()
+        {
+            throw new NotSupportedException();
+        }
+
         public AutomaticCommandBarCommand(Action execute, Func<Availability> availability = null)
         {
             if (execute == null)
