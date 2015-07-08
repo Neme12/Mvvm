@@ -14,7 +14,7 @@ namespace Neme.Mvvm.Tests
             base.RaisePropertyChanged(propertyName);
         }
 
-        public new void SetProperty<T>(ref T field, T value, string propertyName)
+        public new void Set<T>(ref T field, T value, string propertyName)
         {
             base.Set(ref field, value, propertyName);
         }

@@ -79,6 +79,7 @@ namespace Neme.Mvvm.Tests
         private void TestAvailabilityChanged(AutomaticCommandBarCommand command)
         {
             command.RaiseAvailabilityChanged();
+            command.RaiseAvailabilityChanged(default(object), default(EventArgs));
 
             int timesCalled = 0;
 
@@ -91,7 +92,7 @@ namespace Neme.Mvvm.Tests
             command.RaiseAvailabilityChanged();
             Assert.AreEqual(1, timesCalled);
 
-            command.RaiseAvailabilityChanged();
+            command.RaiseAvailabilityChanged(default(object), default(EventArgs));
             Assert.AreEqual(2, timesCalled);
         }
 

@@ -24,6 +24,11 @@ namespace Neme.Mvvm
                 handler(this, EventArgs.Empty);
         }
 
+        public void RaiseCanExecuteChanged(object sender, EventArgs e)
+        {
+            RaiseCanExecuteChanged();
+        }
+
         // ICommand
 
         public bool CanExecute(object parameter)

@@ -37,7 +37,7 @@ namespace Neme.Mvvm.Tests
         public void TestSetProperty()
         {
             string field = null;
-            notifyClass.SetProperty(ref field, "oldValue", "Property");
+            notifyClass.Set(ref field, "oldValue", "Property");
             Assert.AreEqual("oldValue", field);
 
             string calledPropertyName = null;
@@ -47,7 +47,7 @@ namespace Neme.Mvvm.Tests
                 Assert.AreEqual("newValue", field);
             };
 
-            notifyClass.SetProperty(ref field, "newValue", "Property");
+            notifyClass.Set(ref field, "newValue", "Property");
             Assert.AreEqual("Property", calledPropertyName);
         }
 
@@ -59,7 +59,7 @@ namespace Neme.Mvvm.Tests
 
             notifyClass.PropertyChanged += (sender, e) => called = true;
 
-            notifyClass.SetProperty(ref field, "value", "Property");
+            notifyClass.Set(ref field, "value", "Property");
             Assert.IsFalse(called);
         }
 

@@ -9,11 +9,11 @@ namespace Neme.Mvvm
 {
     public interface IAutomaticCommand : ICommand
     {
-        void RaiseCanExecuteChanged();
+        void RaiseCanExecuteChanged(object sender = null, EventArgs e = null);
     }
 
     public interface IAutomaticCommandBarCommand : ICommandBarCommand
     {
-        void RaiseAvailabilityChanged();
+        void RaiseAvailabilityChanged(object sender = null, EventArgs e = null);
     }
 }

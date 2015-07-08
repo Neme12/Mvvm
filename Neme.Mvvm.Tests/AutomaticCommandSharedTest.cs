@@ -26,6 +26,7 @@ namespace Neme.Mvvm.Tests
         protected void TestCanExecuteChanged(AutomaticCommandShared command)
         {
             command.RaiseCanExecuteChanged();
+            command.RaiseCanExecuteChanged(default(object), default(EventArgs));
 
             int timesCalled = 0;
 
@@ -38,7 +39,7 @@ namespace Neme.Mvvm.Tests
             command.RaiseCanExecuteChanged();
             Assert.AreEqual(1, timesCalled);
 
-            command.RaiseCanExecuteChanged();
+            command.RaiseCanExecuteChanged(default(object), default(EventArgs));
             Assert.AreEqual(2, timesCalled);
         }
     }

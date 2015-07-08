@@ -51,6 +51,11 @@ namespace Neme.Mvvm
                 handler(this, EventArgs.Empty);
         }
 
+        public void RaiseAvailabilityChanged(object sender, EventArgs e)
+        {
+            RaiseAvailabilityChanged();
+        }
+
         // ICommandBarCommand
 
         public Availability Availability
