@@ -41,6 +41,7 @@
     <TargetPlatform Include="WindowsPhoneApp, Version=8.1" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Converters\CombinedConverter.cs" />
     <Compile Include="Converters\Visibilitizer.cs" />
     <Compile Include="Converters\BooleanInverter.cs" />
     <Compile Include="Converters\FullConverter.cs" />
