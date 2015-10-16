@@ -1,7 +1,7 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace Neme.Mvvm.Tests
+namespace Neme.Mvvm.Commands.Tests
 {
     [TestClass]
     public class AutomaticCommandTest : AutomaticCommandSharedTest

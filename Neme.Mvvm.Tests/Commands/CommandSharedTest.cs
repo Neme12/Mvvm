@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Neme.TestUtilities;
 
-namespace Neme.Mvvm.Tests
+namespace Neme.Mvvm.Commands.Tests
 {
     public abstract class CommandSharedTest
     {

@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
 
-namespace Neme.Mvvm
+namespace Neme.Mvvm.Commands
 {
     public interface IAutomaticCommand : ICommand
     {

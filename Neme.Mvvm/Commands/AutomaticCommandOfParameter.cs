@@ -4,13 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Windows.Input;
 
-namespace Neme.Mvvm
+namespace Neme.Mvvm.Commands
 {
-    public class AutomaticCommand : AutomaticCommandShared
+    public class AutomaticCommand<TParameter> : AutomaticCommandShared
     {
-        private readonly Action execute;
+        private readonly Action<TParameter> execute;
 
-        public AutomaticCommand(Action execute, Func<bool> canExecute = null)
+        public AutomaticCommand(Action<TParameter> execute, Func<bool> canExecute = null)
             : base(canExecute)
         {
             if (execute == null)
@@ -23,7 +23,7 @@ namespace Neme.Mvvm
 
         public override void Execute(object parameter)
         {
-            execute();
+            execute((TParameter)parameter);
         }
     }
 }

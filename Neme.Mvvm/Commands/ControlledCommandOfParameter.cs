@@ -4,14 +4,14 @@ using System.Linq;
 using System.Text;
 using System.Windows.Input;
 
-namespace Neme.Mvvm
+namespace Neme.Mvvm.Commands
 {
-    public class AutomaticCommand<TParameter> : AutomaticCommandShared
+    public class ControlledCommand<TParameter> : ControlledCommandShared
     {
         private readonly Action<TParameter> execute;
 
-        public AutomaticCommand(Action<TParameter> execute, Func<bool> canExecute = null)
-            : base(canExecute)
+        public ControlledCommand(Action<TParameter> execute, bool isEnabled)
+            : base(isEnabled)
         {
             if (execute == null)
                 throw new ArgumentNullException(nameof(execute));

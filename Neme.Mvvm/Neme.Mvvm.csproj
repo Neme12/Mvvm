@@ -34,18 +34,18 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="AutomaticCommand.cs" />
-    <Compile Include="AutomaticSmartCommand.cs" />
-    <Compile Include="AutomaticCommandOfParameter.cs" />
-    <Compile Include="AutomaticCommandShared.cs" />
-    <Compile Include="Availability.cs" />
-    <Compile Include="ControlledCommand.cs" />
-    <Compile Include="ControlledSmartCommand.cs" />
-    <Compile Include="ControlledCommandOfParameter.cs" />
-    <Compile Include="ControlledCommandShared.cs" />
-    <Compile Include="IAutomaticCommand.cs" />
-    <Compile Include="ISmartCommand.cs" />
-    <Compile Include="IControlledCommand.cs" />
+    <Compile Include="Commands\AutomaticCommand.cs" />
+    <Compile Include="Commands\AutomaticSmartCommand.cs" />
+    <Compile Include="Commands\AutomaticCommandOfParameter.cs" />
+    <Compile Include="Commands\AutomaticCommandShared.cs" />
+    <Compile Include="Commands\Availability.cs" />
+    <Compile Include="Commands\ControlledCommand.cs" />
+    <Compile Include="Commands\ControlledSmartCommand.cs" />
+    <Compile Include="Commands\ControlledCommandOfParameter.cs" />
+    <Compile Include="Commands\ControlledCommandShared.cs" />
+    <Compile Include="Commands\IAutomaticCommand.cs" />
+    <Compile Include="Commands\ISmartCommand.cs" />
+    <Compile Include="Commands\IControlledCommand.cs" />
     <Compile Include="NotifyBase.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

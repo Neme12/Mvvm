@@ -3,7 +3,7 @@ using System.Windows.Input;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Neme.TestUtilities;
 
-namespace Neme.Mvvm.Tests
+namespace Neme.Mvvm.Commands.Tests
 {
     [TestClass]
     public class ControlledCommandOfParameterTest : ControlledCommandSharedTest

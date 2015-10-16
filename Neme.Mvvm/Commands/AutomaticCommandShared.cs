@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Input;
 
-namespace Neme.Mvvm
+namespace Neme.Mvvm.Commands
 {
     public abstract class AutomaticCommandShared : IAutomaticCommand
     {

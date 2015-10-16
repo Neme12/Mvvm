@@ -53,17 +53,17 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
-    <Compile Include="AutomaticCommandOfParameterTest.cs" />
-    <Compile Include="AutomaticCommandSharedTest.cs" />
-    <Compile Include="AutomaticCommandTest.cs" />
-    <Compile Include="CommandSharedTest.cs" />
-    <Compile Include="ControlledSmartCommandTest.cs" />
-    <Compile Include="ControlledCommandOfParameterTest.cs" />
-    <Compile Include="ControlledCommandSharedTest.cs" />
-    <Compile Include="ControlledCommandTest.cs" />
+    <Compile Include="Commands\AutomaticCommandOfParameterTest.cs" />
+    <Compile Include="Commands\AutomaticCommandSharedTest.cs" />
+    <Compile Include="Commands\AutomaticCommandTest.cs" />
+    <Compile Include="Commands\CommandSharedTest.cs" />
+    <Compile Include="Commands\ControlledSmartCommandTest.cs" />
+    <Compile Include="Commands\ControlledCommandOfParameterTest.cs" />
+    <Compile Include="Commands\ControlledCommandSharedTest.cs" />
+    <Compile Include="Commands\ControlledCommandTest.cs" />
     <Compile Include="NotifyBaseClass.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="AutomaticSmartCommandTest.cs" />
+    <Compile Include="Commands\AutomaticSmartCommandTest.cs" />
     <Compile Include="NotifyBaseTest.cs" />
   </ItemGroup>
   <ItemGroup>
