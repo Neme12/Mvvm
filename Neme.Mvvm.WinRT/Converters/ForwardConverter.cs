@@ -9,14 +9,13 @@ namespace Neme.Mvvm.Converters
 {
     public abstract class ForwardConverter<T1, T2> : IValueConverter
     {
-        public object Convert(object value, Type targetType, object parameter, string language)
+        object IValueConverter.Convert(object value, Type targetType, object parameter, string language) => Convert((T1)value);
+
+        object IValueConverter.ConvertBack(object value, Type targetType, object parameter, string language)
         {
-            throw new NotImplementedException();
+            throw new NotSupportedException();
         }
 
-        public object ConvertBack(object value, Type targetType, object parameter, string language)
-        {
-            throw new NotImplementedException();
-        }
+        public abstract T2 Convert(T1 value);
     }
 }
