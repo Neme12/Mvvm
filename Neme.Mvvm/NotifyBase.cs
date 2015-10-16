@@ -13,9 +13,7 @@ namespace Neme.Mvvm
 
         protected void RaisePropertyChanged(string propertyName)
         {
-            var handler = PropertyChanged;
-            if (handler != null)
-                handler(this, new PropertyChangedEventArgs(propertyName));
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
 
         protected void Set<T>(ref T field, T value, [CallerMemberName] string propertyName = null)

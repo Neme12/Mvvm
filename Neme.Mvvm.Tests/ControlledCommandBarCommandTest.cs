@@ -9,10 +9,7 @@ namespace Neme.Mvvm.Tests
     {
         private readonly Action emptyAction = () => { };
 
-        private ControlledCommandBarCommand CreateEmpty(Availability availability)
-        {
-            return new ControlledCommandBarCommand(emptyAction, availability);
-        }
+        private ControlledCommandBarCommand CreateEmpty(Availability availability) => new ControlledCommandBarCommand(emptyAction, availability);
 
         [TestMethod]
         public void ActionNullThrows()

@@ -10,10 +10,7 @@ namespace Neme.Mvvm.Tests
     {
         private readonly Action<int> emptyActionOfInt = (_) => { };
 
-        private ControlledCommand<int> CreateEmpty(bool isEnabled)
-        {
-            return new ControlledCommand<int>(emptyActionOfInt, isEnabled);
-        }
+        private ControlledCommand<int> CreateEmpty(bool isEnabled) => new ControlledCommand<int>(emptyActionOfInt, isEnabled);
 
         [TestMethod]
         public void ActionNullThrows()

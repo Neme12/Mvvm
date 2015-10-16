@@ -7,7 +7,7 @@ namespace Neme.Mvvm.Tests
     [TestClass]
     public class NotifyBaseTest
     {
-        NotifyBaseClass notifyClass = new NotifyBaseClass();
+        private readonly NotifyBaseClass notifyClass = new NotifyBaseClass();
 
         [TestMethod]
         public void TestRaisePropertyChanged()

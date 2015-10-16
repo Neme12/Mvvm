@@ -13,7 +13,7 @@ namespace Neme.Mvvm
         public ControlledCommandBarCommand(Action execute, Availability availibility)
         {
             if (execute == null)
-                throw new ArgumentNullException("execute");
+                throw new ArgumentNullException(nameof(execute));
 
             this.execute = execute;
             this.availibility = availibility;
@@ -21,9 +21,7 @@ namespace Neme.Mvvm
 
         private void RaiseAvailabilityChanged()
         {
-            var handler = AvailabilityChanged;
-            if (handler != null)
-                handler(this, EventArgs.Empty);
+            AvailabilityChanged?.Invoke(this, EventArgs.Empty);
         }
 
         // IControlledCommandBarCommand

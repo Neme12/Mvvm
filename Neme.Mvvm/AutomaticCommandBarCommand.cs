@@ -19,7 +19,7 @@ namespace Neme.Mvvm
         public AutomaticCommandBarCommand(Action execute, Func<Availability> availability = null)
         {
             if (execute == null)
-                throw new ArgumentNullException("execute");
+                throw new ArgumentNullException(nameof(execute));
 
             this.execute = execute;
             this.availability = availability;
@@ -28,7 +28,7 @@ namespace Neme.Mvvm
         public AutomaticCommandBarCommand(Action execute, Func<bool> isVisible, Func<bool> isEnabled)
         {
             if (execute == null)
-                throw new ArgumentNullException("execute");
+                throw new ArgumentNullException(nameof(execute));
 
             this.execute = execute;
             this.availability = () => GetAvailability(isVisible, isEnabled);
@@ -46,9 +46,7 @@ namespace Neme.Mvvm
 
         public void RaiseAvailabilityChanged()
         {
-            var handler = AvailabilityChanged;
-            if (handler != null)
-                handler(this, EventArgs.Empty);
+            AvailabilityChanged?.Invoke(this, EventArgs.Empty);
         }
 
         public void RaiseAvailabilityChanged(object sender, EventArgs e)
@@ -58,10 +56,7 @@ namespace Neme.Mvvm
 
         // ICommandBarCommand
 
-        public Availability Availability
-        {
-            get { return availability == null ? Availability.Available : availability(); }
-        }
+        public Availability Availability => availability == null ? Availability.Available : availability();
 
         public void Execute()
         {

@@ -19,9 +19,7 @@ namespace Neme.Mvvm
 
         public void RaiseCanExecuteChanged()
         {
-            var handler = CanExecuteChanged;
-            if (handler != null)
-                handler(this, EventArgs.Empty);
+            CanExecuteChanged?.Invoke(this, EventArgs.Empty);
         }
 
         public void RaiseCanExecuteChanged(object sender, EventArgs e)
@@ -31,13 +29,10 @@ namespace Neme.Mvvm
 
         // ICommand
 
-        public bool CanExecute(object parameter)
-        {
-            return canExecute == null ? true : canExecute();
-        }
-           
+        public bool CanExecute(object parameter) => canExecute == null ? true : canExecute();
+
         public abstract void Execute(object parameter);
-   
+
         public event EventHandler CanExecuteChanged;
     }
 }

@@ -17,9 +17,7 @@ namespace Neme.Mvvm
 
         protected void RaiseCanExecuteChanged()
         {
-            var handler = CanExecuteChanged;
-            if (handler != null)
-                handler(this, EventArgs.Empty);
+            CanExecuteChanged?.Invoke(this, EventArgs.Empty);
         }
 
         // IControlledCommand
@@ -32,10 +30,7 @@ namespace Neme.Mvvm
 
         // ICommand
 
-        public bool CanExecute(object parameter)
-        {
-            return isEnabled;
-        }
+        public bool CanExecute(object parameter) => isEnabled;
 
         public abstract void Execute(object parameter);
 
