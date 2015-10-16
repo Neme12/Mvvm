@@ -6,17 +6,17 @@ using System.Threading.Tasks;
 
 namespace Neme.Mvvm
 {
-    public class AutomaticCommandBarCommand : IAutomaticCommandBarCommand
+    public class AutomaticSmartCommand : IAutomaticSmartCommand
     {
         private readonly Action execute;
         private readonly Func<Availability> availability;
 
-        public AutomaticCommandBarCommand()
+        public AutomaticSmartCommand()
         {
             throw new NotSupportedException();
         }
 
-        public AutomaticCommandBarCommand(Action execute, Func<Availability> availability = null)
+        public AutomaticSmartCommand(Action execute, Func<Availability> availability = null)
         {
             if (execute == null)
                 throw new ArgumentNullException(nameof(execute));
@@ -25,7 +25,7 @@ namespace Neme.Mvvm
             this.availability = availability;
         }
 
-        public AutomaticCommandBarCommand(Action execute, Func<bool> isVisible, Func<bool> isEnabled)
+        public AutomaticSmartCommand(Action execute, Func<bool> isVisible, Func<bool> isEnabled)
         {
             if (execute == null)
                 throw new ArgumentNullException(nameof(execute));
@@ -42,7 +42,7 @@ namespace Neme.Mvvm
                 return Availability.Hidden;
         }
 
-        // IAutomaticCommandBarCommand
+        // IAutomaticSmartCommand
 
         public void RaiseAvailabilityChanged()
         {
@@ -54,7 +54,7 @@ namespace Neme.Mvvm
             RaiseAvailabilityChanged();
         }
 
-        // ICommandBarCommand
+        // ISmartCommand
 
         public Availability Availability => availability == null ? Availability.Available : availability();
 

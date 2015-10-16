@@ -12,7 +12,7 @@ namespace Neme.Mvvm
         bool IsEnabled { get; set; }
     }
 
-    public interface IControlledCommandBarCommand : ICommandBarCommand
+    public interface IControlledSmartCommand : ISmartCommand
     {
         new Availability Availability { get; set; }
     }

@@ -35,16 +35,16 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="AutomaticCommand.cs" />
-    <Compile Include="AutomaticCommandBarCommand.cs" />
+    <Compile Include="AutomaticSmartCommand.cs" />
     <Compile Include="AutomaticCommandOfParameter.cs" />
     <Compile Include="AutomaticCommandShared.cs" />
     <Compile Include="Availability.cs" />
     <Compile Include="ControlledCommand.cs" />
-    <Compile Include="ControlledCommandBarCommand.cs" />
+    <Compile Include="ControlledSmartCommand.cs" />
     <Compile Include="ControlledCommandOfParameter.cs" />
     <Compile Include="ControlledCommandShared.cs" />
     <Compile Include="IAutomaticCommand.cs" />
-    <Compile Include="ICommandBarCommand.cs" />
+    <Compile Include="ISmartCommand.cs" />
     <Compile Include="IControlledCommand.cs" />
     <Compile Include="NotifyBase.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

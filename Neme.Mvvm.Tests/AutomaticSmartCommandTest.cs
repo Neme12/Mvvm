@@ -5,16 +5,16 @@ using Neme.TestUtilities;
 namespace Neme.Mvvm.Tests
 {
     [TestClass]
-    public class AutomaticCommandBarCommandTest : CommandSharedTest
+    public class AutomaticSmartCommandTest : CommandSharedTest
     {
         private readonly Action emptyAction = () => { };
 
-        private void TestDefaultAvailability(AutomaticCommandBarCommand defaultCommand)
+        private void TestDefaultAvailability(AutomaticSmartCommand defaultCommand)
         {
             Assert.AreEqual(Availability.Available, defaultCommand.Availability);
         }
 
-        private void TestAvailability(Func<Func<Availability>, AutomaticCommandBarCommand> createAvailabilityCommand)
+        private void TestAvailability(Func<Func<Availability>, AutomaticSmartCommand> createAvailabilityCommand)
         {
             Availability availability = Availability.Available;
             var command = createAvailabilityCommand(() => availability);
@@ -29,7 +29,7 @@ namespace Neme.Mvvm.Tests
             Assert.AreEqual(Availability.Available, command.Availability);
         }
 
-        private void TestAvailability(Func<Func<bool>, Func<bool>, AutomaticCommandBarCommand> createAvailabilityCommand)
+        private void TestAvailability(Func<Func<bool>, Func<bool>, AutomaticSmartCommand> createAvailabilityCommand)
         {
             bool isVisible = true;
             bool isEnabled = true;
@@ -52,7 +52,7 @@ namespace Neme.Mvvm.Tests
             Assert.AreEqual(Availability.Available, command.Availability);
         }
 
-        private void TestIsVisible(Func<Func<bool>, AutomaticCommandBarCommand> createIsVisibleCommand)
+        private void TestIsVisible(Func<Func<bool>, AutomaticSmartCommand> createIsVisibleCommand)
         {
             bool isVisible = true;
             var command = createIsVisibleCommand(() => isVisible);
@@ -64,7 +64,7 @@ namespace Neme.Mvvm.Tests
             Assert.AreEqual(Availability.Available, command.Availability);
         }
 
-        private void TestIsEnabled(Func<Func<bool>, AutomaticCommandBarCommand> createIsEnabledCommand)
+        private void TestIsEnabled(Func<Func<bool>, AutomaticSmartCommand> createIsEnabledCommand)
         {
             bool isEnabled = true;
             var command = createIsEnabledCommand(() => isEnabled);
@@ -76,7 +76,7 @@ namespace Neme.Mvvm.Tests
             Assert.AreEqual(Availability.Available, command.Availability);
         }
 
-        private void TestAvailabilityChanged(AutomaticCommandBarCommand command)
+        private void TestAvailabilityChanged(AutomaticSmartCommand command)
         {
             command.RaiseAvailabilityChanged();
             command.RaiseAvailabilityChanged(default(object), default(EventArgs));
@@ -96,7 +96,7 @@ namespace Neme.Mvvm.Tests
             Assert.AreEqual(2, timesCalled);
         }
 
-        private void TestExecute(Func<Action, AutomaticCommandBarCommand> createCommand)
+        private void TestExecute(Func<Action, AutomaticSmartCommand> createCommand)
         {
             bool called = false;
 
@@ -110,40 +110,40 @@ namespace Neme.Mvvm.Tests
         [TestMethod]
         public void TestDefaultConstructor()
         {
-            Throws.Exception<NotSupportedException>(() => new AutomaticCommandBarCommand());
+            Throws.Exception<NotSupportedException>(() => new AutomaticSmartCommand());
         }
 
         [TestMethod]
         public void ActionNullThrows()
         {
-            ThrowsExecuteNull(() => new AutomaticCommandBarCommand(null));
-            ThrowsExecuteNull(() => new AutomaticCommandBarCommand(null, null, null));
+            ThrowsExecuteNull(() => new AutomaticSmartCommand(null));
+            ThrowsExecuteNull(() => new AutomaticSmartCommand(null, null, null));
         }
 
         [TestMethod]
         public void TestAvailability()
         {
-            TestDefaultAvailability(new AutomaticCommandBarCommand(emptyAction));
-            TestDefaultAvailability(new AutomaticCommandBarCommand(emptyAction, null, null));
+            TestDefaultAvailability(new AutomaticSmartCommand(emptyAction));
+            TestDefaultAvailability(new AutomaticSmartCommand(emptyAction, null, null));
 
-            TestAvailability(availability => new AutomaticCommandBarCommand(emptyAction, availability));
-            TestAvailability((isVisible, isEnabled) => new AutomaticCommandBarCommand(emptyAction, isVisible, isEnabled));
+            TestAvailability(availability => new AutomaticSmartCommand(emptyAction, availability));
+            TestAvailability((isVisible, isEnabled) => new AutomaticSmartCommand(emptyAction, isVisible, isEnabled));
 
-            TestIsVisible(isVisible => new AutomaticCommandBarCommand(emptyAction, isVisible, null));
-            TestIsEnabled(isEnabled => new AutomaticCommandBarCommand(emptyAction, null, isEnabled));
+            TestIsVisible(isVisible => new AutomaticSmartCommand(emptyAction, isVisible, null));
+            TestIsEnabled(isEnabled => new AutomaticSmartCommand(emptyAction, null, isEnabled));
         }
 
         [TestMethod]
         public void TestAvailabilityChanged()
         {
-            TestAvailabilityChanged(new AutomaticCommandBarCommand(emptyAction));
+            TestAvailabilityChanged(new AutomaticSmartCommand(emptyAction));
         }
 
         [TestMethod]
         public void TestExecute()
         {
-            TestExecute(execute => new AutomaticCommandBarCommand(execute));
-            TestExecute(execute => new AutomaticCommandBarCommand(execute, null, null));
+            TestExecute(execute => new AutomaticSmartCommand(execute));
+            TestExecute(execute => new AutomaticSmartCommand(execute, null, null));
         }
     }
 }

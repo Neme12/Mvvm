@@ -5,16 +5,16 @@ using Neme.TestUtilities;
 namespace Neme.Mvvm.Tests
 {
     [TestClass]
-    public class ControlledCommandBarCommandTest : CommandSharedTest
+    public class ControlledSmartCommandTest : CommandSharedTest
     {
         private readonly Action emptyAction = () => { };
 
-        private ControlledCommandBarCommand CreateEmpty(Availability availability) => new ControlledCommandBarCommand(emptyAction, availability);
+        private ControlledSmartCommand CreateEmpty(Availability availability) => new ControlledSmartCommand(emptyAction, availability);
 
         [TestMethod]
         public void ActionNullThrows()
         {
-            ThrowsExecuteNull(() => new ControlledCommandBarCommand(null, Availability.Available));
+            ThrowsExecuteNull(() => new ControlledSmartCommand(null, Availability.Available));
         }
 
         [TestMethod]
@@ -73,7 +73,7 @@ namespace Neme.Mvvm.Tests
         {
             bool called = false;
 
-            var command = new ControlledCommandBarCommand(() => called = true, Availability.Available);
+            var command = new ControlledSmartCommand(() => called = true, Availability.Available);
 
             Assert.IsFalse(called);
             command.Execute();

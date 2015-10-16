@@ -5,12 +5,12 @@ using System.Text;
 
 namespace Neme.Mvvm
 {
-    public class ControlledCommandBarCommand : IControlledCommandBarCommand
+    public class ControlledSmartCommand : IControlledSmartCommand
     {
         private readonly Action execute;
         private Availability availibility;
 
-        public ControlledCommandBarCommand(Action execute, Availability availibility)
+        public ControlledSmartCommand(Action execute, Availability availibility)
         {
             if (execute == null)
                 throw new ArgumentNullException(nameof(execute));
@@ -24,7 +24,7 @@ namespace Neme.Mvvm
             AvailabilityChanged?.Invoke(this, EventArgs.Empty);
         }
 
-        // IControlledCommandBarCommand
+        // IControlledSmartCommand
 
         public Availability Availability
         {
@@ -32,7 +32,7 @@ namespace Neme.Mvvm
             set { availibility = value; RaiseAvailabilityChanged(); }
         }
 
-        // ICommandBarCommand
+        // ISmartCommand
 
         public void Execute()
         {

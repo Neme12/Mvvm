@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Neme.Mvvm
 {
-    public interface ICommandBarCommand
+    public interface ISmartCommand
     {
         event EventHandler AvailabilityChanged;
 

@@ -12,7 +12,7 @@ namespace Neme.Mvvm
         void RaiseCanExecuteChanged(object sender = null, EventArgs e = null);
     }
 
-    public interface IAutomaticCommandBarCommand : ICommandBarCommand
+    public interface IAutomaticSmartCommand : ISmartCommand
     {
         void RaiseAvailabilityChanged(object sender = null, EventArgs e = null);
     }
