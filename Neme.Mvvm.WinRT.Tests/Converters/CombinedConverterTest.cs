@@ -46,22 +46,22 @@ namespace Neme.Mvvm.Converters.Tests
             converter.ConvertBack(Visibility.Visible, null, null, "language");
             Assert.AreEqual("language", spy.CalledLanguage);
         }
-    }
 
-    class ValueConverterSpy : IValueConverter
-    {
-        public string CalledLanguage { get; private set; }
-
-        public object Convert(object value, Type targetType, object parameter, string language)
+        class ValueConverterSpy : IValueConverter
         {
-            CalledLanguage = language;
-            return value;
-        }
+            public string CalledLanguage { get; private set; }
 
-        public object ConvertBack(object value, Type targetType, object parameter, string language)
-        {
-            CalledLanguage = language;
-            return value;
+            public object Convert(object value, Type targetType, object parameter, string language)
+            {
+                CalledLanguage = language;
+                return value;
+            }
+
+            public object ConvertBack(object value, Type targetType, object parameter, string language)
+            {
+                CalledLanguage = language;
+                return value;
+            }
         }
     }
 }

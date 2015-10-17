@@ -115,6 +115,7 @@
     <SDKReference Include="TestPlatform, Version=14.0" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Converters\SmartCommandConverterTest.cs" />
     <Compile Include="Converters\CombinedConverterTest.cs" />
     <Compile Include="Converters\VisibilitizerTest.cs" />
     <Compile Include="Converters\BooleanInverterTest.cs" />
@@ -148,6 +149,10 @@
     <ProjectReference Include="..\Neme.Mvvm.WinRT\Neme.Mvvm.WinRT.csproj">
       <Project>{b15b994d-3a72-43f0-9b81-5ce15b380f5f}</Project>
       <Name>Neme.Mvvm.WinRT</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Neme.Mvvm\Neme.Mvvm.csproj">
+      <Project>{2a682388-b48e-4a1d-911e-884bd5035b42}</Project>
+      <Name>Neme.Mvvm</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
