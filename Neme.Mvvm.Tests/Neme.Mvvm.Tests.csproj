@@ -57,6 +57,7 @@
     <Compile Include="Commands\AutomaticCommandSharedTest.cs" />
     <Compile Include="Commands\AutomaticCommandTest.cs" />
     <Compile Include="Commands\CommandSharedTest.cs" />
+    <Compile Include="Commands\SmartCommandNotifierTest.cs" />
     <Compile Include="Commands\ControlledSmartCommandTest.cs" />
     <Compile Include="Commands\ControlledCommandOfParameterTest.cs" />
     <Compile Include="Commands\ControlledCommandSharedTest.cs" />

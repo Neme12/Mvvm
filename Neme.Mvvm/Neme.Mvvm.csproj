@@ -46,6 +46,7 @@
     <Compile Include="Commands\IAutomaticCommand.cs" />
     <Compile Include="Commands\ISmartCommand.cs" />
     <Compile Include="Commands\IControlledCommand.cs" />
+    <Compile Include="Commands\SmartCommandNotifier.cs" />
     <Compile Include="NotifyBase.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

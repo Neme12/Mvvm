@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Neme.Mvvm.Commands
 {
-    public class ControlledSmartCommand : IControlledSmartCommand
+    public class ControlledSmartCommand : SmartCommandNotifier, IControlledSmartCommand
     {
         private readonly Action execute;
         private Availability availibility;
@@ -26,7 +26,7 @@ namespace Neme.Mvvm.Commands
 
         // IControlledSmartCommand
 
-        public Availability Availability
+        public new Availability Availability
         {
             get { return availibility; }
             set { availibility = value; RaiseAvailabilityChanged(); }
@@ -34,11 +34,11 @@ namespace Neme.Mvvm.Commands
 
         // ISmartCommand
 
-        public void Execute()
+        public override void Execute()
         {
             execute();
         }
 
-        public event EventHandler AvailabilityChanged;
+        public override event EventHandler AvailabilityChanged;
     }
 }

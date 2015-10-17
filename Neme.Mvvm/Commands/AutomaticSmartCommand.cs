@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Neme.Mvvm.Commands
 {
-    public class AutomaticSmartCommand : IAutomaticSmartCommand
+    public class AutomaticSmartCommand : SmartCommandNotifier, IAutomaticSmartCommand
     {
         private readonly Action execute;
         private readonly Func<Availability> availability;
@@ -56,13 +56,13 @@ namespace Neme.Mvvm.Commands
 
         // ISmartCommand
 
-        public Availability Availability => availability == null ? Availability.Available : availability();
+        public new Availability Availability => availability == null ? Availability.Available : availability();
 
-        public void Execute()
+        public override void Execute()
         {
             execute();
         }
 
-        public event EventHandler AvailabilityChanged;
+        public override event EventHandler AvailabilityChanged;
     }
 }
