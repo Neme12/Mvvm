@@ -45,6 +45,7 @@
     <TargetPlatform Include="WindowsPhoneApp, Version=8.1" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Converters\AvailabilityToVisibilityConverter.cs" />
     <Compile Include="Converters\SmartCommandConverter.cs" />
     <Compile Include="Converters\CombinedConverter.cs" />
     <Compile Include="Converters\Visibilitizer.cs" />
