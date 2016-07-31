@@ -16,13 +16,15 @@ namespace Neme.Mvvm
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
 
-        protected void Set<T>(ref T field, T value, [CallerMemberName] string propertyName = null)
+        protected bool Set<T>(ref T field, T value, [CallerMemberName] string propertyName = null)
         {
             if (EqualityComparer<T>.Default.Equals(field, value))
-                return;
+                return false;
 
             field = value;
             RaisePropertyChanged(propertyName);
+
+            return true;
         }
     }
 }
