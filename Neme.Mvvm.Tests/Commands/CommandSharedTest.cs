@@ -1,9 +1,9 @@
-﻿using System;
+﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Neme.TestUtilities;
 
 namespace Neme.Mvvm.Commands.Tests
 {
@@ -11,7 +11,7 @@ namespace Neme.Mvvm.Commands.Tests
     {
         protected void ThrowsExecuteNull(Action action)
         {
-            Throws.ArgumentNullException(action, "execute");
+            Assert.AreEqual("execute", Assert.ThrowsException<ArgumentNullException>(action).ParamName);
         }
     }
 }

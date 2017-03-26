@@ -1,6 +1,5 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Neme.TestUtilities;
 
 namespace Neme.Mvvm.Commands.Tests
 {

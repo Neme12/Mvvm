@@ -5,7 +5,6 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Neme.TestUtilities;
 
 namespace Neme.Mvvm.Commands.Tests
 {
