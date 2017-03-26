@@ -8,7 +8,7 @@
     <OutputType>AppContainerExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Neme.Mvvm.Tests</RootNamespace>
-    <AssemblyName>Neme.Mvvm.WinRT.Tests</AssemblyName>
+    <AssemblyName>Neme.Mvvm.UWP.Tests</AssemblyName>
     <DefaultLanguage>en-US</DefaultLanguage>
     <TargetPlatformIdentifier>UAP</TargetPlatformIdentifier>
     <TargetPlatformVersion>10.0.10240.0</TargetPlatformVersion>
@@ -16,7 +16,7 @@
     <MinimumVisualStudioVersion>14</MinimumVisualStudioVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{A5A43C5B-DE2A-4C0C-9213-0A381AF9435A};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
-    <PackageCertificateKeyFile>Neme.Mvvm.WinRT.Tests_TemporaryKey.pfx</PackageCertificateKeyFile>
+    <PackageCertificateKeyFile>Neme.Mvvm.UWP.Tests_TemporaryKey.pfx</PackageCertificateKeyFile>
     <UnitTestPlatformVersion Condition="'$(UnitTestPlatformVersion)' == ''">$(VisualStudioVersion)</UnitTestPlatformVersion>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
@@ -119,7 +119,7 @@
     <AppxManifest Include="Package.appxmanifest">
       <SubType>Designer</SubType>
     </AppxManifest>
-    <None Include="Neme.Mvvm.WinRT.Tests_TemporaryKey.pfx" />
+    <None Include="Neme.Mvvm.UWP.Tests_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Properties\UnitTestApp.rd.xml" />
@@ -132,9 +132,9 @@
     <Content Include="Assets\Wide310x150Logo.scale-200.png" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Neme.Mvvm.WinRT\Neme.Mvvm.WinRT.csproj">
+    <ProjectReference Include="..\Neme.Mvvm.UWP\Neme.Mvvm.UWP.csproj">
       <Project>{7690a39a-ab8e-437d-b097-e03b4228935e}</Project>
-      <Name>Neme.Mvvm.WinRT</Name>
+      <Name>Neme.Mvvm.UWP</Name>
     </ProjectReference>
     <ProjectReference Include="..\Neme.Mvvm\Neme.Mvvm.csproj">
       <Project>{2a682388-b48e-4a1d-911e-884bd5035b42}</Project>

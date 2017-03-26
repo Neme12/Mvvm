@@ -7,9 +7,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Neme.Mvvm", "Neme.Mvvm\Neme
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Neme.Mvvm.Tests", "Neme.Mvvm.Tests\Neme.Mvvm.Tests.csproj", "{A9A194CC-B9F5-4713-A51F-8B010A566F72}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Neme.Mvvm.WinRT", "Neme.Mvvm.WinRT\Neme.Mvvm.WinRT.csproj", "{7690A39A-AB8E-437D-B097-E03B4228935E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Neme.Mvvm.UWP", "Neme.Mvvm.UWP\Neme.Mvvm.UWP.csproj", "{7690A39A-AB8E-437D-B097-E03B4228935E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Neme.Mvvm.WinRT.Tests", "Neme.Mvvm.WinRT.Tests\Neme.Mvvm.WinRT.Tests.csproj", "{DC8D458E-DA08-477F-97F9-238828283836}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Neme.Mvvm.UWP.Tests", "Neme.Mvvm.UWP.Tests\Neme.Mvvm.UWP.Tests.csproj", "{DC8D458E-DA08-477F-97F9-238828283836}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

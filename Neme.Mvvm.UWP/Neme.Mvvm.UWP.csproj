@@ -8,7 +8,7 @@
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Neme.Mvvm</RootNamespace>
-    <AssemblyName>Neme.Mvvm.WinRT</AssemblyName>
+    <AssemblyName>Neme.Mvvm.UWP</AssemblyName>
     <DefaultLanguage>en-US</DefaultLanguage>
     <TargetPlatformIdentifier>UAP</TargetPlatformIdentifier>
     <TargetPlatformVersion>10.0.10240.0</TargetPlatformVersion>
@@ -116,7 +116,7 @@
     <Compile Include="Converters\SmartCommandConverter.cs" />
     <Compile Include="Converters\Visibilitizer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Properties\Neme.Mvvm.WinRT.rd.xml" />
+    <EmbeddedResource Include="Properties\Neme.Mvvm.UWP.rd.xml" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Neme.Mvvm\Neme.Mvvm.csproj">
