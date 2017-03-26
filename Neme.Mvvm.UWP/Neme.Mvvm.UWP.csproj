@@ -120,7 +120,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Neme.Mvvm\Neme.Mvvm.csproj">
-      <Project>{2a682388-b48e-4a1d-911e-884bd5035b42}</Project>
+      <Project>{30fcdae7-32c2-4f6f-8c05-1c55d40d864d}</Project>
       <Name>Neme.Mvvm</Name>
     </ProjectReference>
   </ItemGroup>
