@@ -1,56 +1,45 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Package xmlns="http://schemas.microsoft.com/appx/2010/manifest">
-  
-  <Identity Name="a4823d0a-e223-4659-b0c1-e5ce7f51d692"
+<Package
+  xmlns="http://schemas.microsoft.com/appx/manifest/foundation/windows10"
+  xmlns:mp="http://schemas.microsoft.com/appx/2014/phone/manifest"
+  xmlns:uap="http://schemas.microsoft.com/appx/manifest/uap/windows10"
+  IgnorableNamespaces="uap mp">
+
+  <Identity Name="57667923-48dd-40eb-8793-ebf82867d077"
             Publisher="CN=neme1"
             Version="1.0.0.0" />
-  
+
+  <mp:PhoneIdentity PhoneProductId="57667923-48dd-40eb-8793-ebf82867d077" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
+
   <Properties>
     <DisplayName>Neme.Mvvm.WinRT.Tests</DisplayName>
     <PublisherDisplayName>neme1</PublisherDisplayName>
-    <Logo>Images\UnitTestStoreLogo.png</Logo>
-    <Description>Neme.Mvvm.WinRT.Tests</Description>
+    <Logo>Assets\StoreLogo.png</Logo>
   </Properties>
-  
-  <Prerequisites>
-    <OSMinVersion>6.3.0</OSMinVersion>
-    <OSMaxVersionTested>6.3.0</OSMaxVersionTested>
-  </Prerequisites>
-  
-  <Resources>
-    <Resource Language="x-generate"/>
-  </Resources>
-  
-  <Applications>
-    <Application Id="vstest.executionengine.App" 
-        Executable="vstest.executionengine.appcontainer.exe" 
-        EntryPoint="vstest.executionengine.App">
-        <VisualElements 
-            DisplayName="NoUIEntryPoints"
-            Logo="Images\UnitTestLogo.png"
-            SmallLogo="Images\UnitTestSmallLogo.png"
-            Description="vstest.executionengine.App"
-            ForegroundText="light"
-            BackgroundColor="#0084FF">
-            <SplashScreen Image="Images\UnitTestSplashScreen.png" />
-        </VisualElements>
-    </Application>
 
-    <Application Id="vstest.executionengine.x86.App" 
-        Executable="vstest.executionengine.appcontainer.x86.exe" 
-        EntryPoint="vstest.executionengine.x86.App">
-        <VisualElements 
-            DisplayName="NoUIEntryPoints"
-            Logo="Images\UnitTestLogo.png"
-            SmallLogo="Images\UnitTestSmallLogo.png"
-            Description="vstest.executionengine.x86.App"
-            ForegroundText="light"
-            BackgroundColor="#0084FF">
-            <SplashScreen Image="Images\UnitTestSplashScreen.png" />
-        </VisualElements>
+  <Dependencies>
+    <TargetDeviceFamily Name="Windows.Universal" MinVersion="10.0.0.0" MaxVersionTested="10.0.0.0" />
+  </Dependencies>
+
+  <Resources>
+    <Resource Language="x-generate" />
+  </Resources>
+  <Applications>
+    <Application Id="vstest.executionengine.universal.App"
+        Executable="$targetnametoken$.exe"
+        EntryPoint="Neme.Mvvm.WinRT.Tests.App">
+      <uap:VisualElements
+        DisplayName="Neme.Mvvm.WinRT.Tests"
+        Square150x150Logo="Assets\Square150x150Logo.png"
+        Square44x44Logo="Assets\Square44x44Logo.png"
+        Description="Neme.Mvvm.WinRT.Tests"
+        BackgroundColor="transparent">
+        <uap:DefaultTile Wide310x150Logo="Assets\Wide310x150Logo.png"/>
+        <uap:SplashScreen Image="Assets\SplashScreen.png" />
+      </uap:VisualElements>
     </Application>
   </Applications>
   <Capabilities>
-    <Capability Name="internetClient" />
+    <Capability Name="internetClientServer" />
   </Capabilities>
 </Package>
