@@ -8,6 +8,7 @@ namespace Neme.Mvvm.Commands
 {
     public enum Availability
     {
+        Example,
         Available,
         Disabled,
         Hidden
