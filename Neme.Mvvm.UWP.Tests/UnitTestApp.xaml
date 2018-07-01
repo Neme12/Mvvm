@@ -1,8 +1,0 @@
-﻿<Application
-    x:Class="Neme.Mvvm.UWP.Tests.App"
-    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:local="using:Neme.Mvvm.UWP.Tests"
-    RequestedTheme="Light">
-
-</Application>
