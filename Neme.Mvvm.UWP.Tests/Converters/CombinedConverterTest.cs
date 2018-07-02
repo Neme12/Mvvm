@@ -16,8 +16,8 @@ namespace Neme.Mvvm.Converters.Tests
         public CombinedConverterTest()
         {
             converter = new CombinedConverter();
-            converter.Add(new BooleanInverter());
-            converter.Add(new Visibilitizer());
+            converter.Converters.Add(new BooleanInverter());
+            converter.Converters.Add(new Visibilitizer());
         }
 
         [TestMethod]
@@ -38,7 +38,7 @@ namespace Neme.Mvvm.Converters.Tests
         public void TestPassedLanguage()
         {
             var spy = new ValueConverterSpy();
-            converter.Add(spy);
+            converter.Converters.Add(spy);
 
             converter.Convert(true, null, null, "language");
             Assert.AreEqual("language", spy.CalledLanguage);

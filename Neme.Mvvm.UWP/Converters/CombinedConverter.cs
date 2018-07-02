@@ -4,18 +4,29 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Windows.UI.Xaml.Data;
+using Windows.UI.Xaml.Markup;
 
 namespace Neme.Mvvm.Converters
 {
-    public class CombinedConverter : List<IValueConverter>, IValueConverter
+    [ContentProperty(Name = nameof(Converters))]
+    public class CombinedConverter : IValueConverter
     {
-        private IEnumerable<IValueConverter> converters => this;
-        private IEnumerable<IValueConverter> convertersReversed => (this as IEnumerable<IValueConverter>).Reverse();
+        public List<IValueConverter> Converters { get; } = new List<IValueConverter>();
 
-        public object Convert(object value, Type targetType, object parameter, string language) =>
-            converters.Aggregate(value, (current, converter) => converter.Convert(current, null, null, language));
+        public object Convert(object value, Type targetType, object parameter, string language)
+        {
+            for (int i = 0; i < Converters.Count; ++i)
+                value = Converters[i].Convert(value, null, null, language);
 
-        public object ConvertBack(object value, Type targetType, object parameter, string language) =>
-            convertersReversed.Aggregate(value, (current, converter) => converter.ConvertBack(current, null, null, language));
+            return value;
+        }
+
+        public object ConvertBack(object value, Type targetType, object parameter, string language)
+        {
+            for (int i = Converters.Count - 1; i >= 0; --i)
+                value = Converters[i].ConvertBack(value, null, null, language);
+
+            return value;
+        }
     }
 }
