@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.26228.9
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Neme.Mvvm.UWP", "Neme.Mvvm.UWP\Neme.Mvvm.UWP.csproj", "{7690A39A-AB8E-437D-B097-E03B4228935E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Neme.Mvvm.Platform", "Neme.Mvvm.Platform\Neme.Mvvm.Platform.csproj", "{7690A39A-AB8E-437D-B097-E03B4228935E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Neme.Mvvm.UWP.Tests", "Neme.Mvvm.UWP.Tests\Neme.Mvvm.UWP.Tests.csproj", "{DC8D458E-DA08-477F-97F9-238828283836}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Neme.Mvvm.Platform.Tests", "Neme.Mvvm.Platform.Tests\Neme.Mvvm.Platform.Tests.csproj", "{DC8D458E-DA08-477F-97F9-238828283836}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Neme.Mvvm", "Neme.Mvvm\Neme.Mvvm.csproj", "{30FCDAE7-32C2-4F6F-8C05-1C55D40D864D}"
 EndProject
