@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Neme.Mvvm.Converters
 {
-    public class BooleanInverter : FullConverter<bool, bool>
+    public class BooleanInverter : TwoWayConverter<bool, bool>
     {
         public override bool Convert(bool value) => !value;
 

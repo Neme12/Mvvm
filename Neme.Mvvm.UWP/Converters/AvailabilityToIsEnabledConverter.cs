@@ -8,7 +8,7 @@ using Windows.UI.Xaml;
 
 namespace Neme.Mvvm.Converters
 {
-    public class AvailabilityToIsEnabledConverter : ForwardConverter<Availability, bool>
+    public class AvailabilityToIsEnabledConverter : OneWayConverter<Availability, bool>
     {
         public override bool Convert(Availability value) =>
             value == Availability.Available;

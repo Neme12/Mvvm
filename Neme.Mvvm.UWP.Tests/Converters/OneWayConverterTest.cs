@@ -8,9 +8,9 @@ using Windows.UI.Xaml.Data;
 namespace Neme.Mvvm.Converters.Tests
 {
     [TestClass]
-    public class ForwardConverterTest
+    public class OneWayConverterTest
     {
-        private readonly ForwardConverterClass<string, string> converter = new ForwardConverterClass<string, string>();
+        private readonly OneWayConverterClass<string, string> converter = new OneWayConverterClass<string, string>();
 
         [TestMethod]
         public void TestConvert()

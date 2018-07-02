@@ -7,7 +7,7 @@ using Windows.UI.Xaml;
 
 namespace Neme.Mvvm.Converters
 {
-    public class Visibilitizer : FullConverter<bool, Visibility>
+    public class Visibilitizer : TwoWayConverter<bool, Visibility>
     {
         public override Visibility Convert(bool value) => value ? Visibility.Visible : Visibility.Collapsed;
 

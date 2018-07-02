@@ -8,7 +8,7 @@ using System.Windows.Input;
 
 namespace Neme.Mvvm.Converters
 {
-    public class SmartCommandConverter : ForwardConverter<ISmartCommand, ICommand>
+    public class SmartCommandConverter : OneWayConverter<ISmartCommand, ICommand>
     {
         public override ICommand Convert(ISmartCommand value) => new SmartCommandHolder(value);
 

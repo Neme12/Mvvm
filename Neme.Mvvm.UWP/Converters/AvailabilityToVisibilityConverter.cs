@@ -8,7 +8,7 @@ using Windows.UI.Xaml;
 
 namespace Neme.Mvvm.Converters
 {
-    public class AvailabilityToVisibilityConverter : ForwardConverter<Availability, Visibility>
+    public class AvailabilityToVisibilityConverter : OneWayConverter<Availability, Visibility>
     {
         public override Visibility Convert(Availability value) =>
             value == Availability.Hidden ? Visibility.Collapsed : Visibility.Visible;
