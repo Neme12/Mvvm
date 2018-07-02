@@ -4,7 +4,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+#if WPF
+using System.Windows;
+#else
 using Windows.UI.Xaml;
+#endif
 
 namespace Neme.Mvvm.Converters
 {

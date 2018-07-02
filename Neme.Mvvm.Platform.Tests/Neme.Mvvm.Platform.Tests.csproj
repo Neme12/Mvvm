@@ -12,7 +12,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Neme.Mvvm\Neme.Mvvm.csproj" />
-    <ProjectReference Include="..\Neme.Mvvm.Platform\Neme.Mvvm.Platform.csproj" />
+    <ProjectReference Include="..\Neme.Mvvm.Platform\Neme.Mvvm.Platform.csproj" AdditionalProperties="TargetFramework=netstandard1.0" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="15.7.2" />
