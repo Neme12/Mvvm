@@ -11,17 +11,18 @@ using Windows.UI.Xaml;
 
 namespace Neme.Mvvm.Converters
 {
-    public class Visibilitizer :
-#if WPF
-        OneWayConverter<bool, Visibility>
-#else
-        TwoWayConverter<bool, Visibility>
-#endif
+    public class Visibilitizer : TwoWayConverter<bool, Visibility>
     {
         public override Visibility Convert(bool value) => value ? Visibility.Visible : Visibility.Collapsed;
 
-#if UWP
-        public override bool ConvertBack(Visibility value) => value == Visibility.Visible;
-#endif
+        public override bool ConvertBack(Visibility value)
+        {
+            switch (value)
+            {
+                case Visibility.Visible: return true;
+                case Visibility.Collapsed: return false;
+                default: throw new ArgumentOutOfRangeException(nameof(value));
+            }
+        }
     }
 }

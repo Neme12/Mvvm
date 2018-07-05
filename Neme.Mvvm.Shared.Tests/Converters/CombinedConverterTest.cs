@@ -3,8 +3,15 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Windows.UI.Xaml.Data;
+#if WPF
+using System.Windows;
+using System.Windows.Data;
+using ConverterLanguage = System.Globalization.CultureInfo;
+#else
 using Windows.UI.Xaml;
+using Windows.UI.Xaml.Data;
+using ConverterLanguage = System.String;
+#endif
 
 namespace Neme.Mvvm.Converters.Tests
 {
@@ -40,24 +47,31 @@ namespace Neme.Mvvm.Converters.Tests
             var spy = new ValueConverterSpy();
             converter.Converters.Add(spy);
 
-            converter.Convert(true, null, null, "language");
-            Assert.AreEqual("language", spy.CalledLanguage);
+            var language =
+#if WPF
+                new ConverterLanguage("en");
+#else
+                "en";
+#endif
 
-            converter.ConvertBack(Visibility.Visible, null, null, "language");
-            Assert.AreEqual("language", spy.CalledLanguage);
+            converter.Convert(true, null, null, language);
+            Assert.AreEqual(language, spy.CalledLanguage);
+
+            converter.ConvertBack(Visibility.Visible, null, null, language);
+            Assert.AreEqual(language, spy.CalledLanguage);
         }
 
         class ValueConverterSpy : IValueConverter
         {
-            public string CalledLanguage { get; private set; }
+            public ConverterLanguage CalledLanguage { get; private set; }
 
-            public object Convert(object value, Type targetType, object parameter, string language)
+            public object Convert(object value, Type targetType, object parameter, ConverterLanguage language)
             {
                 CalledLanguage = language;
                 return value;
             }
 
-            public object ConvertBack(object value, Type targetType, object parameter, string language)
+            public object ConvertBack(object value, Type targetType, object parameter, ConverterLanguage language)
             {
                 CalledLanguage = language;
                 return value;

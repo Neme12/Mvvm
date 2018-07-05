@@ -3,8 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Windows.UI.Xaml.Data;
+#if WPF
+using System.Windows;
+#else
 using Windows.UI.Xaml;
+#endif
 
 namespace Neme.Mvvm.Converters.Tests
 {
@@ -25,6 +28,13 @@ namespace Neme.Mvvm.Converters.Tests
         {
             Assert.AreEqual(true, converter.ConvertBack(Visibility.Visible));
             Assert.AreEqual(false, converter.ConvertBack(Visibility.Collapsed));
+
+#if WPF
+            Assert.AreEqual("value",
+                Assert.ThrowsException<ArgumentOutOfRangeException>(() => converter.ConvertBack(Visibility.Hidden)).ParamName);
+#endif
+            Assert.AreEqual("value",
+                Assert.ThrowsException<ArgumentOutOfRangeException>(() => converter.ConvertBack((Visibility)255)).ParamName);
         }
     }
 }

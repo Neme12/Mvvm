@@ -3,15 +3,14 @@
   <PropertyGroup>
     <TargetFramework>net46</TargetFramework>
     <IsPackable>false</IsPackable>
-    <DefineConstants>$(DefineConstants);UWP</DefineConstants>
+    <DefineConstants>$(DefineConstants);WPF</DefineConstants>
     <RootNamespace>Neme.Mvvm.Tests</RootNamespace>
   </PropertyGroup>
 
   <ItemGroup>
-    <Reference Include="Windows.Foundation.UniversalApiContract">
-      <HintPath>$(MSBuildProgramFiles32)\Windows Kits\10\References\Windows.Foundation.UniversalApiContract\1.0.0.0\Windows.Foundation.UniversalApiContract.winmd</HintPath>
-      <Private>false</Private>
-    </Reference>
+    <Reference Include="System.Xaml" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
   </ItemGroup>
 
   <ItemGroup>
@@ -22,7 +21,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Neme.Mvvm\Neme.Mvvm.csproj" />
-    <ProjectReference Include="..\Neme.Mvvm.UWP\Neme.Mvvm.UWP.csproj" />
+    <ProjectReference Include="..\Neme.Mvvm.WPF\Neme.Mvvm.WPF.csproj" />
   </ItemGroup>
 
   <Import Project="..\Neme.Mvvm.Shared.Tests\Neme.Mvvm.Shared.Tests.projitems" Label="Shared" />
