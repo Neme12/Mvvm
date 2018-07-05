@@ -1,0 +1,21 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net45</TargetFramework>
+    <DefineConstants>$(DefineConstants);WPF</DefineConstants>
+    <RootNamespace>Neme.Mvvm</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Reference Include="System.Xaml" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Neme.Mvvm\Neme.Mvvm.csproj" />
+  </ItemGroup>
+
+  <Import Project="..\Neme.Mvvm.Shared\Neme.Mvvm.Shared.projitems" Label="Shared" />
+
+</Project>

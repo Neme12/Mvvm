@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <SharedGUID>c3e1daf1-019d-4939-9cd5-547557de3715</SharedGUID>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <Import_RootNamespace>Neme.Mvvm</Import_RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)Converters\AvailabilityToIsEnabledConverter.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Converters\AvailabilityToVisibilityConverter.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Converters\BooleanInverter.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Converters\CombinedConverter.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Converters\Int32NotZeroConverter.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Converters\Multiplier.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Converters\NotNullConverter.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Converters\Objectifier.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Converters\OneWayConverter.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Converters\OrientationInverter.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Converters\SmartCommandConverter.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Converters\StringNotEmptyConverter.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Converters\TwoWayConverter.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Converters\Visibilitizer.cs" />
+  </ItemGroup>
+</Project>
