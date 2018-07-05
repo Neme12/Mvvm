@@ -17,7 +17,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Neme.Mvvm.UWP", "Neme.Mvvm.
 EndProject
 Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "Neme.Mvvm.Shared.Tests", "Neme.Mvvm.Shared.Tests\Neme.Mvvm.Shared.Tests.shproj", "{CF911A4B-D73F-4C58-9696-23D3D55077E0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Neme.Mvvm.WPF.Tests", "Neme.Mvvm.WPF.Tests\Neme.Mvvm.WPF.Tests.csproj", "{549DB098-DBDB-48F5-941F-594F3CD4B448}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Neme.Mvvm.WPF.Tests", "Neme.Mvvm.WPF.Tests\Neme.Mvvm.WPF.Tests.csproj", "{549DB098-DBDB-48F5-941F-594F3CD4B448}"
 EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
