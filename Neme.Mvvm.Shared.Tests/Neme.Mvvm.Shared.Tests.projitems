@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <SharedGUID>cf911a4b-d73f-4c58-9696-23d3d55077e0</SharedGUID>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <Import_RootNamespace>Neme.Mvvm.Tests</Import_RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)Converters\AvailabilityToIsEnabledConverterTest.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Converters\AvailabilityToVisibilityConverterTest.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Converters\BooleanInverterTest.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Converters\CombinedConverterTest.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Converters\Int32NotZeroConverterTest.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Converters\MultiplierTest.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Converters\NotNullConverterTest.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Converters\ObjectifierTest.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Converters\OneWayConverterClass.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Converters\OneWayConverterTest.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Converters\OrientationInverterTest.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Converters\SmartCommandConverterTest.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Converters\StringNotEmptyConverterTest.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Converters\TwoWayConverterClass.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Converters\TwoWayConverterTest.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Converters\VisibilitizerTest.cs" />
+  </ItemGroup>
+</Project>
